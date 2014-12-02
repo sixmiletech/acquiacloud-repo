@@ -1,0 +1,29 @@
+<?php
+/**
+ * Author: Ted Bowman
+ * Date: 12/2/14
+ * Time: 1:31 PM
+ */
+
+/**
+ * Implements hook_update_N().
+ */
+function custom_content_types_update_7000(&$sandbox) {
+  $messages = array();
+
+  // Delete field
+
+  return implode('<br />', $messages);
+}
+
+/**
+ * Just a test update. Why you updating message here.
+ * Implements hook_update_N().
+ */
+function custom_content_types_update_7001(&$sandbox) {
+  $messages = array();
+  drupal_set_message('hello!');
+  // Delete field
+
+  return implode('<br />', $messages);
+}
