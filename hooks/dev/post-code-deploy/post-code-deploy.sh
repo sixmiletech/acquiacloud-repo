@@ -23,6 +23,6 @@ else
     echo "$site.$target_env: Deployed $deployed_tag."
 fi
 
-drush updatedb -y
+drush @$site.$target_env updatedb -y
 
-drush fr-all -y
+drush @$site.$target_env fr-all -y
