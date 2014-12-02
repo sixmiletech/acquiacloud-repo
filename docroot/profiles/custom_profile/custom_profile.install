@@ -433,13 +433,24 @@ function custom_profile_install() {
 
 /**
  * Enable features & disable overlay.
- * 
+ *
  * Implements hook_update_N().
  */
 function custom_profile_update_7000(&$sandbox) {
   $messages = array();
   module_disable(array('overlay'));
   module_enable(array('features'));
+
+  return implode('<br />', $messages);
+}
+/**
+ * Enable Content Type Feature.
+ *
+ * Implements hook_update_N().
+ */
+function custom_profile_update_7001(&$sandbox) {
+  $messages = array();
+  module_enable(array('custom_content_types'));
 
   return implode('<br />', $messages);
 }
